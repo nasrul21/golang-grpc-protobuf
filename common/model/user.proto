@@ -9,7 +9,7 @@ enum UserGender {
 }
 
 message User {
-    string id = 1;
+    string ID = 1;
     string name = 2;
     string password = 3;
     UserGender gender = 4;

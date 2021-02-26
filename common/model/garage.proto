@@ -8,7 +8,7 @@ message GarageCoordinate {
 }
 
 message Garage {
-    string id = 1;
+    string ID = 1;
     string name = 2;
     GarageCoordinate coordinate = 3;
 }
@@ -21,18 +21,18 @@ message GarageListByUser {
     map<string, GarageList> list = 1;
 }
 
-message GarageUserId {
-    string user_id = 1;
+message GarageUserID {
+    string userID = 1;
 }
 
-message GarageAndUserId {
-    string user_id = 1;
+message GarageAndUserID {
+    string userID = 1;
     Garage garage = 2;
 }
 
 import "google/protobuf/empty.proto";
 
 service Garages {
-    rpc List(GarageUserId) returns (GarageList) {}
-    rpc Add(GarageAndUserId) returns (google.protobuf.Empty) {}
+    rpc List(GarageUserID) returns (GarageList) {}
+    rpc Add(GarageAndUserID) returns (google.protobuf.Empty) {}
 }
